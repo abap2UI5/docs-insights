@@ -8,7 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DIST = path.join(import.meta.dirname, "..", "dist");
-const BASE = "/insights/";
+const BASE = "/docs-insights/";
 const ESSAYS = path.join(import.meta.dirname, "..", "src", "content", "essays");
 
 const walk = (dir) =>
@@ -157,7 +157,7 @@ test("an image that states its size states the size of its SVG", () => {
   // width/height on <img> set the rendered size: a stale pair scales the
   // diagram, and its 13px labels with it, up past the text around it
   for (const file of pages) {
-    for (const [, src, w, h] of read(file).matchAll(/<img src="\/insights\/([^"]+\.svg)"[^>]*? width="(\d+)" height="(\d+)"/g)) {
+    for (const [, src, w, h] of read(file).matchAll(/<img src="\/docs-insights\/([^"]+\.svg)"[^>]*? width="(\d+)" height="(\d+)"/g)) {
       const svg = read(path.join(DIST, src));
       const [, vw, vh] = svg.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
       assert.deepEqual([w, h], [vw, vh], `${path.relative(DIST, file)}: ${src}`);
@@ -173,7 +173,7 @@ test("the links to the manual are absolute and name no page of this site", () =>
 });
 
 test("the canonical address is the published one, and the feed is there", () => {
-  assert.match(home, /<link rel="canonical" href="https:\/\/abap2ui5\.github\.io\/insights\/">/);
+  assert.match(home, /<link rel="canonical" href="https:\/\/abap2ui5\.github\.io\/docs-insights\/">/);
   const rss = read(path.join(DIST, "rss.xml"));
   assert.equal((rss.match(/<item>/g) || []).length, slugs.length);
 });
@@ -181,13 +181,13 @@ test("the canonical address is the published one, and the feed is there", () => 
 test("the search feed: every essay once, at its own address, for the family's index", () => {
   const feed = JSON.parse(read(path.join(DIST, "search.json")));
   assert.equal(feed.site, "Insights");
-  assert.equal(feed.url, "https://abap2ui5.github.io/insights/");
+  assert.equal(feed.url, "https://abap2ui5.github.io/docs-insights/");
   assert.equal(feed.entries.length, slugs.length, "one entry per essay");
   for (const e of feed.entries) {
     assert.match(e.title, /^#\d+ \S/, "the number and the title");
     assert.ok(e.text, `${e.title}: a line of text`);
     assert.ok(Array.isArray(e.headings), `${e.title}: headings`);
-    const slug = e.url.replace("https://abap2ui5.github.io/insights/", "").replace(/\/$/, "");
+    const slug = e.url.replace("https://abap2ui5.github.io/docs-insights/", "").replace(/\/$/, "");
     assert.ok(slugs.includes(slug), `${e.url} is an essay`);
     const html = read(path.join(DIST, slug, "index.html"));
     for (const [, anchor] of e.headings) assert.match(html, new RegExp(`id="${anchor}"`), `${e.url}#${anchor}`);

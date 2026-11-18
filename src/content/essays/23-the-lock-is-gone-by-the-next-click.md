@@ -6,12 +6,12 @@ blurb: "enqueue in a stateless world"
 description: "Why an ENQUEUE set while a screen opens is gone before the next click, and the patterns that replace it - lock at save, an optimistic check, a soft lock, a stateful session."
 ---
 
-*Read first: [#7](/insights/07-one-click-one-request/).*
+*Read first: [#7](/docs-insights/07-one-click-one-request/).*
 
 `VA02` calls `ENQUEUE_EVVBAK` when the order opens and holds the lock for as
 long as the dialog session lives. That works because the session lives.
 
-In abap2UI5 every click is a fresh session — [#7](/insights/07-one-click-one-request/)
+In abap2UI5 every click is a fresh session — [#7](/docs-insights/07-one-click-one-request/)
 — so a lock set while the order opens is released before the user has finished
 reading the screen. The ABAP is still valid. The assumption underneath it is
 not, and this is the habit that most reliably surprises a developer coming
@@ -42,7 +42,7 @@ lock at save and the optimistic check are the production default for a
 stateless app. Every pattern on this page is written out as a complete class,
 with the edge cases, on [Lock](https://abap2ui5.github.io/docs/cookbook/expert_more/lock).
 
-![The lock lives inside one roundtrip; the timestamp guards the minutes between.](/insights/23-lock-at-save.svg)
+![The lock lives inside one roundtrip; the timestamp guards the minutes between.](/docs-insights/23-lock-at-save.svg)
 
 *The lock lives inside one roundtrip; the timestamp guards the minutes between.*
 
@@ -53,7 +53,7 @@ it can go stale, and users like it anyway.
 work process to this user for the rest of the app, and a classic enqueue
 survives between clicks again. It costs one work process per active user and
 is not available on public cloud; when it is the right tool is in
-[#40](/insights/40-how-many-users/).
+[#40](/docs-insights/40-how-many-users/).
 
 **In short:** lock when you save, compare the timestamp before you write, and
 show a soft lock where users need to see who is editing.

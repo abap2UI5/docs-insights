@@ -23,7 +23,7 @@ at the UI5 version the
 [bootstrap](https://abap2ui5.github.io/docs/configuration/setup/ui5_bootstrapping)
 names. That version is a configuration decision of the installation, not a
 property of the SAP release
-([#31](/insights/31-one-codebase-702-to-abap-cloud/)).
+([#31](/docs-insights/31-one-codebase-702-to-abap-cloud/)).
 
 Which is why a control nobody generates is not a special case. Take a
 three-step wizard, a control that is right there in `sap.m` and almost never
@@ -127,7 +127,7 @@ through.
 
 There is a price, and it is not small: nothing writes the layout for you. A
 list report that a few annotations would have described is here a table built
-control by control. [#36](/insights/36-rap-or-abap2ui5/) (later in the series)
+control by control. [#36](/docs-insights/36-rap-or-abap2ui5/) (later in the series)
 is about when the generated list report is the better choice.
 
 **In short:** an abap2UI5 view is plain UI5 XML, so every UI5 control is

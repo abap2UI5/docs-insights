@@ -16,7 +16,7 @@ know which action follows the next click. The network tab of the browser shows
 each answer arriving.
 
 Everything it needs arrives per request — the two strings of
-[#6](/insights/06-ui5-over-the-wire/). Everything it decides is decided
+[#6](/docs-insights/06-ui5-over-the-wire/). Everything it decides is decided
 on the server.
 
 The pattern has a name: a **Hypermedia-Driven Application** (HDA). It sits
@@ -28,7 +28,7 @@ between two better-known kinds of web app:
 - An **HDA** renders what the server sends and knows nothing else. htmx,
   Hotwire and LiveView work this way.
 
-![Three ways to answer a click — multi-page, single-page, hypermedia-driven — and whether a change needs a frontend redeploy.](/insights/08-mpa-spa-hda.svg)
+![Three ways to answer a click — multi-page, single-page, hypermedia-driven — and whether a change needs a frontend redeploy.](/docs-insights/08-mpa-spa-hda.svg)
 
 *Three ways to answer a click — multi-page, single-page, hypermedia-driven — and whether a change needs a frontend redeploy.*
 

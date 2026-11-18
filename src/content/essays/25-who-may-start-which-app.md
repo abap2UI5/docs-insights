@@ -30,7 +30,7 @@ app is one class, `main( )` is its entry, and the branch that shows the first
 view is where an ordinary `AUTHORITY-CHECK` goes — before anything is selected
 and before anything is displayed. When it fails, the user gets a message
 instead of a view. `check_on_navigated( )` is also true on the very first call
-([#7](/insights/07-one-click-one-request/)), so this one branch covers the start
+([#7](/docs-insights/07-one-click-one-request/)), so this one branch covers the start
 of the app and every return to it:
 
 ```abap
@@ -78,7 +78,7 @@ The framework brings the part a web application needs and a report never did:
   (`z2ui5_if_ui5_exit`) for a popup that names a module it has not loaded
   ([Security](https://abap2ui5.github.io/docs/configuration/security#older-releases-switching-unsafe-eval-on)).
 - **Error details can be switched off for production**, as
-  [#21](/insights/21-message-still-works/) described.
+  [#21](/docs-insights/21-message-still-works/) described.
 - **The business logic never leaves the server.** The browser gets a view and
   the data bound to it. There is no client-side rule to read out of a bundle,
   because there is no bundle.
@@ -88,4 +88,4 @@ and the framework protects the request and the page.
 
 What the browser can send the other way — the class name, a draft id, the
 event name, every bound value — and what the framework checks on each is
-[#38](/insights/38-what-the-client-can-send/).
+[#38](/docs-insights/38-what-the-client-can-send/).

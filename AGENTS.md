@@ -2,7 +2,7 @@
 
 abap2UI5 Insights: short technical essays about one idea - what happens when
 the ABAP server sends the *screen* instead of only the data - published at
-https://abap2ui5.github.io/insights/ by GitHub Pages. Written for developers
+https://abap2ui5.github.io/docs-insights/ by GitHub Pages. Written for developers
 and architects: the "why it works like this". A standalone site of the
 abap2UI5 family - its own repository, build and deployment - and nothing in it
 depends on another repository at build time.
@@ -10,6 +10,9 @@ depends on another repository at build time.
 The essays lived in the manual (abap2UI5/docs, `docs/advanced/insights/`)
 until 2026-10-31. Since then this repository is their source; the manual
 keeps a redirect stub for every old address and one sidebar row leading here.
+Until 2026-11-17 the repository was abap2UI5/insights and the site was at
+`/insights/`; the base path is now `/docs-insights/` (`astro.config.mjs`),
+and every local link, the font URLs and the tests use it.
 
 ## Layout
 
@@ -33,7 +36,7 @@ keeps a redirect stub for every old address and one sidebar row leading here.
 
 ```bash
 npm ci
-npm run dev      # dev server, http://localhost:4321/insights/
+npm run dev      # dev server, http://localhost:4321/docs-insights/
 npm run build    # dist/
 npm test         # the tests, against dist/ - build first
 npm run check    # build + test, what CI runs
@@ -42,7 +45,7 @@ npm run report:sentences   # sentences over 35 words; a report, not a test
 
 ## Rules
 
-- **A slug is an address.** `NN-slug.md` is published at `/insights/NN-slug/`,
+- **A slug is an address.** `NN-slug.md` is published at `/docs-insights/NN-slug/`,
   and abap2UI5/docs redirects every old address
   (`/docs/advanced/insights/NN-slug`) to exactly that. `ADDRESSES` in
   `test/site.test.mjs` lists them; a build that loses one fails. Rename an essay
@@ -53,19 +56,19 @@ npm run report:sentences   # sentences over 35 words; a report, not a test
   carries the same number (a test holds both). The index, previous/next and
   the feed follow it. A new essay therefore shifts the essays after it - which
   changes their slugs, so do it as one change across the family: rename the
-  files, rewrite the links (`[#N](/insights/NN-slug/)`, link text and target
+  files, rewrite the links (`[#N](/docs-insights/NN-slug/)`, link text and target
   together), add every old slug to `src/lib/moved.ts`, update `ADDRESSES`, and repoint the docs' stubs in `docs/public/advanced/insights/` and
   any link in the sister repositories. Renumbering is expensive on purpose:
   add essays in batches, not one at a time.
 - **A part is data.** Its id is in the frontmatter, its title and lead in
   `src/lib/parts.ts`. A new part is one entry there plus the id in `PART_IDS`.
 - **The case for using it is not made here.** Cost, who runs it, what an
-  organization keeps, the decision - that is https://abap2ui5.github.io/why/. An essay links it, it does not repeat it.
-- **Links.** A sister essay: `/insights/NN-slug/`. The manual and every other
+  organization keeps, the decision - that is https://abap2ui5.github.io/docs-manager/. An essay links it, it does not repeat it.
+- **Links.** A sister essay: `/docs-insights/NN-slug/`. The manual and every other
   site of the family: absolute (`https://abap2ui5.github.io/docs/...`). No
   VitePress syntax - `{target="_self"}` and `:::` containers render as text
   here; a test holds the first. A diagram goes to `public/` and is referenced
-  as `/insights/name.svg`.
+  as `/docs-insights/name.svg`.
 - **A diagram has a dark variant.** The SVGs share one light palette, and each
   carries a `<style data-dark="">` block that remaps it to the site's dark
   tokens under `prefers-color-scheme: dark` - a `<style>` inside an SVG loaded

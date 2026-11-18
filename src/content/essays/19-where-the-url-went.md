@@ -22,7 +22,7 @@ default or one of three modes:
 | Hash routing | `cs_event-hash_routing` | same screen | returns to the calling app | same screen, or a fresh app in mode `fresh` |
 | App-owned hash | `hash_set( )` | the app reads its hash | raises an event in the app | the app reads its hash |
 
-![The four URL modes - default, app state, hash routing, app-owned hash - and what reload, the Back button and a bookmark do in each.](/insights/19-url-modes.svg)
+![The four URL modes - default, app state, hash routing, app-owned hash - and what reload, the Back button and a bookmark do in each.](/docs-insights/19-url-modes.svg)
 
 *One mode per app: what reload, Back and a bookmark do in each.*
 
@@ -57,16 +57,16 @@ tab open.
 
 No extra storage is needed. The id in the URL is the id of the draft — the
 saved copy of the app instance that the framework writes after every request
-anyway ([#11](/insights/11-a-new-instance-on-every-request/)). The link works
+anyway ([#11](/docs-insights/11-a-new-instance-on-every-request/)). The link works
 as long as the draft exists, four hours by default
-([#26](/insights/26-100-rows-four-hours-one-request/)), and only for the user
+([#26](/docs-insights/26-100-rows-four-hours-one-request/)), and only for the user
 who created it. For anybody else, or after it expired, the app starts fresh
 and shows a toast that says so. `client->app_state_get_href( )` composes the
 absolute link, launchpad included, for a *Share* button or a QR code.
 
 A restored state arrives in `main( )` like a return from a sub-app:
 `check_on_navigated( )` is true and `check_on_init( )` is not. The rule from
-[#7](/insights/07-one-click-one-request/) applies: after a return, send a
+[#7](/docs-insights/07-one-click-one-request/) applies: after a return, send a
 view.
 
 ## Hash Routing: Back Returns to the Calling App
@@ -75,7 +75,7 @@ Hash routing is switched on with
 `client->follow_up_action( client->cs_event-hash_routing )`. The URL then
 shows the running app as `#/app/<CLASS>/<DRAFT>`, `nav_app_call( )` adds a
 history entry, and the browser's back button returns to the caller. That is
-the stack of [#18](/insights/18-call-screen-leave-screen/), controlled by the
+the stack of [#18](/docs-insights/18-call-screen-leave-screen/), controlled by the
 button users press anyway. The mode `cs_nav_mode-fresh` keeps only the class
 in the route, for apps where a bookmark should open the app without the old
 input.
@@ -94,10 +94,10 @@ The query string is separate from the three modes and works with each of
 them. `?app_start=zcl_order_display` starts a class, and the rest of the query
 string belongs to the app: `client->get( )-s_config-search` holds it
 unchanged, and the startup parameters of a launchpad tile arrive in
-`client->get( )-t_comp_params` ([#29](/insights/29-a-tile-like-any-other/)).
+`client->get( )-t_comp_params` ([#29](/docs-insights/29-a-tile-like-any-other/)).
 Whoever holds the link can type both, so they are user input. An app that
 opens order 4711 because the URL said so checks that this user may see 4711
-([#38](/insights/38-what-the-client-can-send/)).
+([#38](/docs-insights/38-what-the-client-can-send/)).
 
 The details, with the cases that combine with the launchpad, are on
 [App State](https://abap2ui5.github.io/docs/cookbook/event_navigation/navigation/app_state)

@@ -6,14 +6,14 @@ blurb: "several S/4 systems behind one app, and the boundary the app draws"
 description: "One side-by-side abap2UI5 app on the BTP ABAP Environment serving several S/4 systems - what makes it possible, and the tenant boundary the app has to enforce itself."
 ---
 
-A side-by-side app ([#34](/insights/34-on-stack-or-side-by-side/))
+A side-by-side app ([#34](/docs-insights/34-on-stack-or-side-by-side/))
 already runs outside the system it serves. How many systems can it serve?
 
 More than one. The app lives on the SAP BTP ABAP Environment and reaches each
 S/4 system through its released APIs, so the connection is configuration rather
 than code.
 
-![One abap2UI5 app on the SAP BTP ABAP Environment serves several S/4HANA systems through their released APIs](/insights/use_cases/saas.svg)
+![One abap2UI5 app on the SAP BTP ABAP Environment serves several S/4HANA systems through their released APIs](/docs-insights/use_cases/saas.svg)
 
 *One installation on BTP, several S/4 systems behind it.*
 
@@ -21,13 +21,13 @@ Nothing was added to make this possible. It follows from three things the
 earlier essays established:
 
 - The frontend renders whatever arrives
-  ([#8](/insights/08-the-frontend-knows-nothing/)), so it does not matter
+  ([#8](/docs-insights/08-the-frontend-knows-nothing/)), so it does not matter
   which system produced it.
 - The app is one class with no artifacts beside it, so there is nothing to
   deploy per system.
 - The state between two clicks is the draft — the framework's saved app
   instance, not a RAP draft
-  ([#11](/insights/11-a-new-instance-on-every-request/)) — and the request
+  ([#11](/docs-insights/11-a-new-instance-on-every-request/)) — and the request
   names it by its id. So no server holds a session that belongs to one system.
 
 There are two limits. The released APIs of every system have to be reachable,
@@ -40,7 +40,7 @@ framework separates by **user** only:
 
 - The draft row carries `sy-uname` and is read back only for that user.
 - The instance is created fresh per request
-  ([#11](/insights/11-a-new-instance-on-every-request/)).
+  ([#11](/docs-insights/11-a-new-instance-on-every-request/)).
 - The draft table is client-dependent like any other. So `sy-mandt` separates
   the clients of the BTP system, but not the S/4 systems behind it.
 

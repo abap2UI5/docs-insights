@@ -22,7 +22,7 @@ the app wants to do:
 | ask the browser to do something | `follow_up_action( )` with a `cs_event` constant |
 | know where it runs | `get( )` — device, launchpad, URL parameters, the raw event |
 
-![The main view fills the screen; a nested view is a part of it, a popup lies on top of it, a popover sits beside one control.](/insights/17-view-slots.svg)
+![The main view fills the screen; a nested view is a part of it, a popup lies on top of it, a popover sits beside one control.](/docs-insights/17-view-slots.svg)
 
 *The four places the first row of the table fills.*
 

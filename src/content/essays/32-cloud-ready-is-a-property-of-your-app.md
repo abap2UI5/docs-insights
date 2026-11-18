@@ -18,7 +18,7 @@ Virtual Data Model — the CDS views SAP publishes and maintains as an API — i
 the way in, and that is exactly what keeps an app upgrade-stable when the
 tables beneath it change.
 
-![The released view is the shape SAP keeps stable across the upgrade.](/insights/32-vdm.svg)
+![The released view is the shape SAP keeps stable across the upgrade.](/docs-insights/32-vdm.svg)
 
 *The released view is the shape SAP keeps stable across the upgrade.*
 

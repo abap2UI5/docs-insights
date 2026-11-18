@@ -1,5 +1,5 @@
 # Build, test and publish the site to GitHub Pages at
-# https://abap2ui5.github.io/insights/.
+# https://abap2ui5.github.io/docs-insights/.
 #
 # On a pull request it builds and tests only. On main it also deploys.
 #

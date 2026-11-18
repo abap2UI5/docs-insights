@@ -57,7 +57,7 @@ gets changed confidently.
 
 That holds for the small screens this series keeps coming back to. A larger app
 splits into several classes like any other ABAP program does, and how is
-[its own article](/insights/28-when-one-class-is-not-enough/). The
+[its own article](/docs-insights/28-when-one-class-is-not-enough/). The
 point is where it starts.
 
 **In short:** the smallest abap2UI5 app is one class that implements

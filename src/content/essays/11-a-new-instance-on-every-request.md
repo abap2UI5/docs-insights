@@ -22,7 +22,7 @@ holds no business data model, only the serialized app object. The browser gets
 a draft id, and sends the draft id back. The state itself never leaves the
 server.
 
-![Every request is a new instance; z2ui5_t_01 is what carries the last one forward.](/insights/11-draft.svg)
+![Every request is a new instance; z2ui5_t_01 is what carries the last one forward.](/docs-insights/11-draft.svg)
 
 *Every request is a new instance; z2ui5_t_01 is what carries the last one forward.*
 

@@ -29,7 +29,7 @@ two places, maintained by two people, kept in step by a service in between.
 
 abap2UI5 puts them back together with `_bind`:
 
-![PARAMETERS: one declaration is the variable and the field. OData: variable and field are two artifacts with a service between. _bind: the field is the variable again.](/insights/13-parameters-bind.svg)
+![PARAMETERS: one declaration is the variable and the field. OData: variable and field are two artifacts with a service between. _bind: the field is the variable again.](/docs-insights/13-parameters-bind.svg)
 
 *PARAMETERS: one declaration is the variable and the field. OData: variable and field are two artifacts with a service between. _bind: the field is the variable again.*
 
@@ -44,7 +44,7 @@ framework builds the model around it, sends it to the browser, takes the
 user's input back and writes it into the same variable. What the developer maintains
 is a variable, in a class, next to the code that reads it.
 
-![The attribute is bound, appears as a path in the view and the model, the Input shows it, and what the user types travels back into the attribute before main( ) runs.](/insights/13-bound-value.svg)
+![The attribute is bound, appears as a path in the view and the model, the Input shows it, and what the user types travels back into the attribute before main( ) runs.](/docs-insights/13-bound-value.svg)
 
 *One attribute, there and back. The picture uses an attribute `quantity` as its example; `pa_arbgb` above travels the same way.*
 

@@ -16,7 +16,7 @@ then documentation about lifecycle hooks. abap2UI5 deliberately has none of
 that. It has three extension points — the picture calls them seams — and each
 is a declared place. They are listed here from the cheapest to the widest.
 
-![Three seams, from the cheapest to the widest: a method call by control id, an expression in the view, a custom control in its own BSP.](/insights/15-three-seams.svg)
+![Three seams, from the cheapest to the widest: a method call by control id, an expression in the view, a custom control in its own BSP.](/docs-insights/15-three-seams.svg)
 
 *Three seams, from the cheapest to the widest: a method call by control id, an expression in the view, a custom control in its own BSP.*
 

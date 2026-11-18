@@ -33,9 +33,9 @@ And the frontend does not age with the backend. By default UI5 is loaded from
 a CDN, so the UI5 version is a configuration decision and does not depend on
 the SAP release. A control released this year works on a system from 2010.
 The other sources of UI5, and when to use them, are in
-[#39](/insights/39-where-ui5-comes-from/).
+[#39](/docs-insights/39-where-ui5-comes-from/).
 
-![Where UI5 comes from decides whether its version follows the SAP release.](/insights/31-bootstrap.svg)
+![Where UI5 comes from decides whether its version follows the SAP release.](/docs-insights/31-bootstrap.svg)
 
 *Where UI5 comes from decides whether its version follows the SAP release.*
 
@@ -44,4 +44,4 @@ is portable in both directions. An app written on ABAP Cloud
 runs on the older system. An app written on 7.02 runs on BTP ABAP Environment.
 The screen built for the system being replaced moves to the new one, as long
 as the app itself reads only what the new system still has
-([#32](/insights/32-cloud-ready-is-a-property-of-your-app/)).
+([#32](/docs-insights/32-cloud-ready-is-a-property-of-your-app/)).

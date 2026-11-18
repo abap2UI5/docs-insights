@@ -25,7 +25,7 @@ an element and moves into it, `tag` adds a child and stays where it is, `a`
 sets an attribute on the element just added, and `end` moves back up. Those
 four methods are the entire API.
 
-![The four methods of the view builder, and where each one leaves the cursor in the tree.](/insights/14-four-verbs.svg)
+![The four methods of the view builder, and where each one leaves the cursor in the tree.](/docs-insights/14-four-verbs.svg)
 
 *The four methods of the view builder, and where each one leaves the cursor in the tree.*
 
@@ -43,7 +43,7 @@ A short chain shows where each verb leaves the cursor:
 Nothing in there names a control, which is exactly why every control is
 reachable — including the ones released last month and the ones nobody has
 wrapped. The vocabulary stays UI5's own, which is
-[#4](/insights/04-no-annotation-in-between/). The builder cannot be behind UI5, because it never knew what UI5
+[#4](/docs-insights/04-no-annotation-in-between/). The builder cannot be behind UI5, because it never knew what UI5
 contains.
 
 The cost is the completion list, which is gone. Two checks replace it. The

@@ -18,12 +18,12 @@ released, and the next click starts the same way. One such trip, from the
 click to the new screen, is a **roundtrip**. Nothing runs between two clicks:
 no timer, no controller, no promise waiting for something.
 
-![One roundtrip: the draft is read, the changes are applied, main( ) runs, the response is built and the draft is written under a new id.](/insights/07-roundtrip.svg)
+![One roundtrip: the draft is read, the changes are applied, main( ) runs, the response is built and the draft is written under a new id.](/docs-insights/07-roundtrip.svg)
 
 *One roundtrip, start to end — the five steps every other article in this series zooms into.*
 
 The *draft* in the picture is the saved copy of the app instance, not a RAP
-draft; [#11](/insights/11-a-new-instance-on-every-request/) explains it.
+draft; [#11](/docs-insights/11-a-new-instance-on-every-request/) explains it.
 
 So `main( )` is a dispatcher, and it dispatches on three questions the client
 can answer:
@@ -45,7 +45,7 @@ can answer:
   ENDMETHOD.
 ```
 
-![Three questions, in this order, and what each branch sends to the browser.](/insights/07-dispatch.svg)
+![Three questions, in this order, and what each branch sends to the browser.](/docs-insights/07-dispatch.svg)
 
 *Three questions, in this order, and what each branch sends to the browser.*
 
@@ -76,13 +76,13 @@ view, and a response without a view is valid.
 The event handler changes attributes and returns. Bound controls update from
 the model, and focus and scroll position stay where they were. The app calls
 its `view_display( )` again only when the structure of the screen changes.
-[#10](/insights/10-only-the-changed-part/) is about exactly that.
+[#10](/docs-insights/10-only-the-changed-part/) is about exactly that.
 
 ## What Survives a Roundtrip
 
 Only the instance itself survives from one call to the next. It is serialized
 after every request —
-[#11](/insights/11-a-new-instance-on-every-request/). Local variables, an open
+[#11](/docs-insights/11-a-new-instance-on-every-request/). Local variables, an open
 cursor and a lock end with the work process, every time.
 
 **In short:** one click is one request and one call of `main( )`, which asks

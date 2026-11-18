@@ -51,7 +51,7 @@ Nothing does, and that is intended.
   ENDMETHOD.
 ```
 
-![Same data, same class — the control is chosen in an IF.](/insights/12-view-swap.svg)
+![Same data, same class — the control is chosen in an IF.](/docs-insights/12-view-swap.svg)
 
 *Same data, same class — the control is chosen in an IF.*
 
@@ -67,7 +67,7 @@ code branches, which is everywhere. Role-dependent layouts, a field that only
 exists for one plant, a table that turns into a chart when the data is small
 enough — none of these need a mechanism, because they are just code.
 
-[#2](/insights/02-somewhere-on-the-way-to-ui5/) showed the same freedom for
+[#2](/docs-insights/02-somewhere-on-the-way-to-ui5/) showed the same freedom for
 the model: a structure described at runtime, not declared up front. Here it
 applies to the view. Together they mean that both the data and the screen are
 decided while the request runs, so what a screen can adapt to is no longer

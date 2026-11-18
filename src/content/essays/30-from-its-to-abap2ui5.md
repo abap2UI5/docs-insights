@@ -35,7 +35,7 @@ cloud in 2018, and gave it a programming model.
 **abap2UI5, 2023.** The backend sends the XML view itself, and a static UI5 app
 renders it.
 
-![Twenty-seven years, and the one move that did not reverse.](/insights/30-timeline.svg)
+![Twenty-seven years, and the one move that did not reverse.](/docs-insights/30-timeline.svg)
 
 *Twenty-seven years, and the one move that did not reverse.*
 
@@ -46,6 +46,6 @@ the **definition** of the screen: first as annotations, then as the view
 itself.
 
 **In short:** sending the screen from the server
-([#6](/insights/06-ui5-over-the-wire/), "UI5 Over-the-Wire") is a returning
+([#6](/docs-insights/06-ui5-over-the-wire/), "UI5 Over-the-Wire") is a returning
 idea, not a new one. What it has now, and the old server-rendered world never
 had, is a real control library in the browser.

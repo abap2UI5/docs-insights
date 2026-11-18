@@ -34,12 +34,12 @@ Between classes the framework keeps the stack:
     client->nav_app_leave( ).
 ```
 
-![Three states of the stack: the list alone, the detail on top while the list waits as an app draft, and the list again after the detail left.](/insights/18-stack.svg)
+![Three states of the stack: the list alone, the detail on top while the list waits as an app draft, and the list again after the detail left.](/docs-insights/18-stack.svg)
 
 *Push and pop: the app below does not run while it waits, it is a draft.*
 
 A *draft* here is the saved copy of an app instance, not a RAP draft
-([#11](/insights/11-a-new-instance-on-every-request/)).
+([#11](/docs-insights/11-a-new-instance-on-every-request/)).
 
 The caller gets `main( )` called again, `check_on_navigated( )` is true, and
 its own attributes are still there — the instance was serialized while it
@@ -75,7 +75,7 @@ its own: an ordinary `z2ui5_if_app` that displays a popup and ends with
 `nav_app_leave( )`. The caller reads the result through `get_app_prev( )`, as
 above.
 
-![The caller sets the question and calls the popup class, the popup displays and leaves, the caller runs again and reads the answer from the popup instance.](/insights/18-popup-return.svg)
+![The caller sets the question and calls the popup class, the popup displays and leaves, the caller runs again and reads the answer from the popup instance.](/docs-insights/18-popup-return.svg)
 
 *The same mechanism for a popup: its answer is an attribute of the instance the caller gets back.*
 

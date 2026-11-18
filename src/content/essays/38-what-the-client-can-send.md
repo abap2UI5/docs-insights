@@ -19,7 +19,7 @@ nothing in it that it cannot verify. This is the list of what the browser choose
 | The headers | the origin of every POST (CSRF check) | switch off the proxy trust when there is no proxy |
 
 The draft in this essay is the framework's saved copy of the app instance
-([#11](/insights/11-a-new-instance-on-every-request/)), not a RAP draft.
+([#11](/docs-insights/11-a-new-instance-on-every-request/)), not a RAP draft.
 
 ## What the Browser Chooses
 
@@ -33,7 +33,7 @@ that does is started, for anybody who reaches the ICF node. So every class on
 the system that implements the interface can be started by every user of the
 node. Which user may run which app is decided by the app's own
 `AUTHORITY-CHECK` in the branch that shows the first view
-([#25](/insights/25-who-may-start-which-app/),
+([#25](/docs-insights/25-who-may-start-which-app/),
 [Authorization](https://abap2ui5.github.io/docs/configuration/authorization)). A check on the node sees only
 who reaches the framework, not which app runs.
 
@@ -76,7 +76,7 @@ exit class (`z2ui5_if_ui5_exit`), and only the transport-level `Host` is compare
 with HTTP 500, and the body carries the exception chain, source positions and
 system context. `check_hide_error_details` in the exit class reduces it to a
 bare *Internal Server Error*
-([#21](/insights/21-message-still-works/)); a production system sets
+([#21](/docs-insights/21-message-still-works/)); a production system sets
 it.
 
 **Calls from the server to the browser.** `follow_up_action( )` with
@@ -92,6 +92,6 @@ the untrusted side. A security review of the client reads the items under
 follow-up actions.
 
 **In short:** the browser never gets the business logic. It receives a view and the
-data bound to it ([#6](/insights/06-ui5-over-the-wire/)), and every
+data bound to it ([#6](/docs-insights/06-ui5-over-the-wire/)), and every
 decision about either is taken in `main( )` on the server, on the next
 request.

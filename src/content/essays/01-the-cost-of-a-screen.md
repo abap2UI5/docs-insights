@@ -112,19 +112,19 @@ as on a desktop.
 The view is written with four methods, and they are all there is: `ele` opens
 a UI5 control and moves into it, `tag` adds a control without moving into it,
 `a` sets a property on the control just added, and `end` moves back up one
-level — [#14](/insights/14-four-verbs-every-control/). `{JOB}` is a UI5 binding
+level — [#14](/docs-insights/14-four-verbs-every-control/). `{JOB}` is a UI5 binding
 path: the column `JOB` of the table the control is bound to.
 
 Three things in the class carry the whole mechanism, and the rest of the
 series takes them apart one at a time. `z2ui5_if_app` is the one interface
-the framework asks for, with one method — [#3](/insights/03-one-class-no-programming-model/).
+the framework asks for, with one method — [#3](/docs-insights/03-one-class-no-programming-model/).
 `check_on_init( )` is true once, on the first call: the data is read and the
 view is built. `check_on_navigated( )` is true when the user comes back from
 another app, and the view is shown again —
-[#7](/insights/07-one-click-one-request/). `_bind( runs )` hands the
+[#7](/docs-insights/07-one-click-one-request/). `_bind( runs )` hands the
 attribute to the view by reference; what the table shows is the internal
 table, and what comes back from the browser lands in the same attribute —
-[#13](/insights/13-where-the-selection-screen-went/).
+[#13](/docs-insights/13-where-the-selection-screen-went/).
 
 Replace `model_init( )` with the `SELECT` that reads your job log and the
 class is finished. Nothing is published beside it: no service, no annotation,
@@ -134,7 +134,7 @@ like any other, and deleting it deletes the application.
 That is the technical side of the cost. A small requirement often cannot pay
 for a long list of artifacts, and then the screen is never built. What that
 means for an organization is on
-[What it costs](https://abap2ui5.github.io/why/#what-it-costs).
+[What it costs](https://abap2ui5.github.io/docs-manager/#what-it-costs).
 
 **In short:** an abap2UI5 app is one class with one interface, and nothing has
 to exist beside it.

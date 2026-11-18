@@ -16,7 +16,7 @@ There are four ways to split an app, and each one is ordinary ABAP.
 **One class per screen.** The unit of an abap2UI5 app is a screen with the
 logic behind it. A master list and a detail screen over different data are two
 classes, connected by the stack from
-[#18](/insights/18-call-screen-leave-screen/): the list calls the detail
+[#18](/docs-insights/18-call-screen-leave-screen/): the list calls the detail
 with `nav_app_call( )`, the detail returns with `nav_app_leave( )`, and the list
 reads the result through `get_app_prev( )`. Each class is small enough to read,
 and each has a `main( )` of its own.
@@ -40,7 +40,7 @@ a side panel — `nest_view_display( )` puts a view built in ABAP into a named
 slot of the main view, and rebuilds only that slot later. The page stands, the
 part changes.
 
-![One app, several classes: a screen per class, a service without a screen, a popup on the stack.](/insights/28-more-than-one-class.svg)
+![One app, several classes: a screen per class, a service without a screen, a popup on the stack.](/docs-insights/28-more-than-one-class.svg)
 
 *One app, several classes: a screen per class, a service without a screen, a popup on the stack.*
 
