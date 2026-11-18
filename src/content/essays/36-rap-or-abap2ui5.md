@@ -9,9 +9,9 @@ description: "The technical criteria for choosing RAP with Fiori Elements or aba
 Most systems end up with both, and the question is "which one for this
 screen", not "which framework". The criteria below are the technical ones;
 the comparison of the two as products, with their costs and their reach, is on
-[When to use it, and when not](https://abap2ui5.github.io/why/#when-to-use-it-and-when-not).
+[When to use it, and when not](https://abap2ui5.github.io/docs-manager/#when-to-use-it-and-when-not).
 
-![UI5 Freestyle writes the screen in a frontend project, RAP with Fiori Elements as annotations, abap2UI5 in the ABAP class - and each sends something different to the browser.](/insights/36-where-the-screen-is-written.svg)
+![UI5 Freestyle writes the screen in a frontend project, RAP with Fiori Elements as annotations, abap2UI5 in the ABAP class - and each sends something different to the browser.](/docs-insights/36-where-the-screen-is-written.svg)
 
 *Where the screen is written, what travels, and where the state waits between two clicks.*
 
@@ -31,7 +31,7 @@ the comparison of the two as products, with their costs and their reach, is on
   object page, or when more than one consumer needs the behavior of the
   business object.
 - **Use UI5 Freestyle** when the browser has to hold state or work offline
-  ([#37](/insights/37-freestyle-or-abap2ui5/)).
+  ([#37](/docs-insights/37-freestyle-or-abap2ui5/)).
 - **Use abap2UI5** when the screen has one consumer, needs controls or a
   layout the annotations do not offer, has a model known only at runtime, or
   runs on a release without RAP.
@@ -47,7 +47,7 @@ draft; see *Drafts* below.) Fiori Elements then
 generates the screen from annotations. abap2UI5 models nothing: the class
 builds a view and reacts to events, and whatever it reads or writes is an
 ordinary ABAP statement in a method
-([#3](/insights/03-one-class-no-programming-model/)). So the first
+([#3](/docs-insights/03-one-class-no-programming-model/)). So the first
 question is where the logic has to live. A transactional object with more than
 one consumer — a second UI, an API, a batch job — needs the behavior outside
 the screen, and RAP is where SAP put it. A screen with one consumer and the
@@ -63,28 +63,28 @@ need, keep the business object and put a different UI in front of it.
 **Where the model is decided.** A RAP service fixes the entity type at design
 time, in CDS, and the frontend discovers it from the metadata. An abap2UI5
 view binds internal tables, and an internal table may have a type that exists
-only at runtime ([#2](/insights/02-somewhere-on-the-way-to-ui5/)). A
+only at runtime ([#2](/docs-insights/02-somewhere-on-the-way-to-ui5/)). A
 screen whose columns are created at runtime (with RTTI, the runtime type
 services), or whose layout branches on the data
-([#12](/insights/12-swapping-the-view-at-runtime/)), has no
+([#12](/docs-insights/12-swapping-the-view-at-runtime/)), has no
 annotation to write.
 
 **Where the vocabulary ends.** Fiori Elements renders what the annotation
 vocabulary describes — list report, object page, their facets and actions —
 and everything outside it is an extension point. abap2UI5 names any control
-in the UI5 library ([#4](/insights/04-no-annotation-in-between/)),
+in the UI5 library ([#4](/docs-insights/04-no-annotation-in-between/)),
 and writes the layout by hand in return. A list report over a stable model is
 cheapest generated; a wizard, a tree, a custom control is cheapest written.
 
 **The minimum release.** RAP needs a release that has it. abap2UI5 runs from
-NetWeaver 7.02 up ([#31](/insights/31-one-codebase-702-to-abap-cloud/)),
+NetWeaver 7.02 up ([#31](/docs-insights/31-one-codebase-702-to-abap-cloud/)),
 and the same class runs on every release in between, which decides the
 question on a system that has no RAP at all.
 
 **Drafts.** RAP keeps a draft of the business object, in its draft table, for
 as long as the draft lives. abap2UI5 keeps a draft of the app instance, in
 `z2ui5_t_01`, for four hours by default
-([#26](/insights/26-100-rows-four-hours-one-request/)). The two are different
+([#26](/docs-insights/26-100-rows-four-hours-one-request/)). The two are different
 things with the same name. An abap2UI5 screen over a RAP object uses both, and
 the one that holds the business data is RAP's.
 

@@ -31,7 +31,7 @@ an object lands on, so the level can be measured.
 abap2UI5 is Level A. It is written in ABAP for Cloud Development and calls
 released APIs only.
 
-As [#32](/insights/32-cloud-ready-is-a-property-of-your-app/) said, that says
+As [#32](/docs-insights/32-cloud-ready-is-a-property-of-your-app/) said, that says
 nothing about your app. The level of an app is decided by what the app calls.
 A screen built on a released API is Level A, whether it renders through
 abap2UI5 or anything else.
@@ -43,7 +43,7 @@ class in Standard ABAP that calls the classic API and is itself released for
 ABAP for Cloud Development. It is graded on its own — B,
 as long as it stays with classic APIs — and the app calling it stays A.
 
-![The app stays in ABAP for Cloud Development and reaches a classic API through a wrapper written in Standard ABAP](/insights/use_cases/on_stack_wrapper.svg)
+![The app stays in ABAP for Cloud Development and reaches a classic API through a wrapper written in Standard ABAP](/docs-insights/use_cases/on_stack_wrapper.svg)
 
 *The app calls the wrapper, and the wrapper calls the classic API.*
 
@@ -60,7 +60,7 @@ ABAP. On releases that do not know ABAP for Cloud Development yet, that is the
 only option. The framework stays Level A either way. Moving an app up a level
 later therefore means changing what it calls; how it renders stays the same:
 
-![Apps written in Standard ABAP call classic APIs or SAP-internal objects, while abap2UI5 itself stays Level A](/insights/use_cases/on_stack_level_b.svg)
+![Apps written in Standard ABAP call classic APIs or SAP-internal objects, while abap2UI5 itself stays Level A](/docs-insights/use_cases/on_stack_level_b.svg)
 
 *Each app has the level of what it calls; the framework is Level A in every case.*
 

@@ -36,7 +36,7 @@ and the model that fills it:
 { "MODEL": { "NAME": "test" } }
 ```
 
-![The browser sends an event, the backend answers with a view and its model, the browser renders both.](/insights/06-two-strings.svg)
+![The browser sends an event, the backend answers with a view and its model, the browser renders both.](/docs-insights/06-two-strings.svg)
 
 *The browser sends an event, the backend answers with a view and its model, the browser renders both.*
 

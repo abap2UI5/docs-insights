@@ -14,7 +14,7 @@ upgrade and roll back.
 
 **What a release is.** A release is a git tag on the framework repository,
 `X.Y.Z` on `main` and `X.Y.Z-702` on the generated downport branch
-([#31](/insights/31-one-codebase-702-to-abap-cloud/)). `main` moves
+([#31](/docs-insights/31-one-codebase-702-to-abap-cloud/)). `main` moves
 with every merge; a tag does not. The [release notes](https://abap2ui5.github.io/docs/resources/changelog)
 list every tag with its date. The version an installation runs is the
 constant `z2ui5_if_app=>version`.
@@ -66,12 +66,12 @@ tag:
 6. Re-test (see *What to Re-Test* below).
 
 An installation that is started through its ICF node needs nothing besides step 3 for the frontend. The frontend is embedded in the backend classes
-([#16](/insights/16-no-build-no-deploy-no-cache/)), so the same pull brings
+([#16](/docs-insights/16-no-build-no-deploy-no-cache/)), so the same pull brings
 the new page and the new modules.
 
 A launchpad installation has one more repository, the frontend as a UI5 app
 from [abap2UI5/frontend](https://github.com/abap2UI5/frontend)
-([#29](/insights/29-a-tile-like-any-other/)). What to do depends on its
+([#29](/docs-insights/29-a-tile-like-any-other/)). What to do depends on its
 branch:
 
 | Branch of the frontend repository | What it contains | On an upgrade |
@@ -97,7 +97,7 @@ page is the one the manual is written against.
 same operation as the upgrade. There is no data to migrate in either
 direction. The framework writes one table, `z2ui5_t_01`, and its rows are
 drafts — saved app instances, not RAP drafts — that expire within hours
-([#40](/insights/40-how-many-users/)). A user whose draft was written by the
+([#40](/docs-insights/40-how-many-users/)). A user whose draft was written by the
 other version restarts the app. One limit: an app that already uses an API
 the previous tag lacks does not compile on it. The deprecations table says
 which release brought what.

@@ -27,7 +27,7 @@ That is it. abap2UI5 calls `main( )` on every roundtrip — one click, one
 request, one call — and your class decides what to display and how to react.
 The view is built when `check_on_navigated( )` is true, which includes the
 first call. An event changes attributes and returns. The full form with three
-branches is [#7](/insights/07-one-click-one-request/).
+branches is [#7](/docs-insights/07-one-click-one-request/).
 Activate the class, append `?app_start=zcl_my_app` to the URL of the abap2UI5
 service, and the app is on screen. It takes about as much ceremony as pressing
 F8.
@@ -199,9 +199,9 @@ one that waits for a modeling exercise.
 
 Where a strict programming model fits, use it — picking one deliberately is
 good engineering. abap2UI5 asks for nothing beyond the signature of `main( )`, so it fits the rest. That is the system not on the newest release, the logic that does not match the shape a model has in mind, and the screen from
-[#1](/insights/01-the-cost-of-a-screen/) whose whole
+[#1](/docs-insights/01-the-cost-of-a-screen/) whose whole
 backend is one class. Where it sits next to RAP is
-[#36](/insights/36-rap-or-abap2ui5/).
+[#36](/docs-insights/36-rap-or-abap2ui5/).
 
 **In short:** an abap2UI5 app implements one interface with one method, and
 inside that method any ABAP works: EML, a `MODIFY`, a BAPI.

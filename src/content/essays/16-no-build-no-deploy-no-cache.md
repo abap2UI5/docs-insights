@@ -19,11 +19,11 @@ both apply once per system, not per app:
 
 - The Fiori launchpad loads the frontend from the UI5 repository, so a
   launchpad installation has one BSP for the whole system
-  ([#29](/insights/29-a-tile-like-any-other/)).
+  ([#29](/docs-insights/29-a-tile-like-any-other/)).
 - A custom control of your own lives in a BSP of its own
-  ([#15](/insights/15-where-your-own-javascript-goes/)).
+  ([#15](/docs-insights/15-where-your-own-javascript-goes/)).
 
-![How the frontend gets to the browser: four steps with a BSP, or a method that returns a string.](/insights/16-initial-request.svg)
+![How the frontend gets to the browser: four steps with a BSP, or a method that returns a string.](/docs-insights/16-initial-request.svg)
 
 *How the frontend gets to the browser: four steps with a BSP, or a method that returns a string.*
 
@@ -47,7 +47,7 @@ cause of many Fiori incidents.
 ## No Cache to Invalidate
 
 The UI is built on every request
-([#6](/insights/06-ui5-over-the-wire/)), so no build output can be out of
+([#6](/docs-insights/06-ui5-over-the-wire/)), so no build output can be out of
 date. Nobody runs a cache transaction and nobody asks a colleague to
 hard-refresh. If a change does not appear, it was not activated.
 
@@ -65,7 +65,7 @@ in the backend.
 Every file that reaches the browser is in the repository, where it can be
 read and compared, and it is transported by the system that already governs
 everything else. What that is worth to a review is on
-[What you keep](https://abap2ui5.github.io/why/#what-you-keep).
+[What you keep](https://abap2ui5.github.io/docs-manager/#what-you-keep).
 
 **In short:** change the class, activate, refresh — there is no frontend
 build, no deployment and no cache in between.

@@ -14,9 +14,9 @@ projection — each belonging to exactly one application.
 An abap2UI5 app has none of them, and no SEGW project either. Every app in the
 system is served by the same generic HTTP handler. Generic means: it does not
 know the app, the view or the model. It moves two strings, the view and the
-model of [#6](/insights/06-ui5-over-the-wire/).
+model of [#6](/docs-insights/06-ui5-over-the-wire/).
 
-![A service per screen, against one handler that knows none of them.](/insights/09-one-service.svg)
+![A service per screen, against one handler that knows none of them.](/docs-insights/09-one-service.svg)
 
 *A service per screen, against one handler that knows none of them.*
 
@@ -44,7 +44,7 @@ because the protocol is a POST with two strings.
 The system footprint is the source in the repository: no CDS artifacts, no
 RAP objects, no generated code, no build step. What that means for a review
 of the dependency is on
-[What you keep](https://abap2ui5.github.io/why/#what-you-keep).
+[What you keep](https://abap2ui5.github.io/docs-manager/#what-you-keep).
 
 This removes artifacts, not effort: the app still decides everything. A screen
 is no longer a set of objects to create, name, transport and govern. It is a

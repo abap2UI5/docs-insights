@@ -7,7 +7,7 @@ description: "Why the view is not sent on every click - an event changes the mod
 ---
 
 If the backend sends the view on every request —
-[#6](/insights/06-ui5-over-the-wire/) — does the screen rebuild itself
+[#6](/docs-insights/06-ui5-over-the-wire/) — does the screen rebuild itself
 on every click?
 
 It would, and the user would notice at once. A rebuilt view is a new set of
@@ -38,7 +38,7 @@ model alone. The browser keeps the view it already shows, and UI5 handles the
 changed model as it always does: data binding updates the controls bound to
 what changed, and touches nothing else.
 
-![What a response carries decides what survives on the screen.](/insights/10-partial-update.svg)
+![What a response carries decides what survives on the screen.](/docs-insights/10-partial-update.svg)
 
 *What a response carries decides what survives on the screen.*
 

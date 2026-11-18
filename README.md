@@ -6,12 +6,12 @@ works under the app, what a working day with it looks like, where it belongs
 in the landscape and what running it takes. Why you would use it is covered on
 the page for decision makers (linked below).
 
-**→ https://abap2ui5.github.io/insights/**
+**→ https://abap2ui5.github.io/docs-insights/**
 
 One of the abap2UI5 family of sites, next to the
 [documentation](https://abap2ui5.github.io/docs/), the
-[playground](https://abap2ui5.github.io/playground/) and the
-[page for decision makers](https://abap2ui5.github.io/why/): its own
+[playground](https://abap2ui5.github.io/browser-playground/) and the
+[page for decision makers](https://abap2ui5.github.io/docs-manager/): its own
 repository, build and deployment, nothing shared but the convention
 (`CONVENTION.md` in abap2UI5/abap2UI5.github.io). Built with
 [Astro](https://astro.build) into static pages without a script.
@@ -20,7 +20,7 @@ repository, build and deployment, nothing shared but the convention
 
 ```bash
 npm ci
-npm run dev       # http://localhost:4321/insights/
+npm run dev       # http://localhost:4321/docs-insights/
 npm run check     # build + tests, what CI runs
 ```
 
@@ -51,9 +51,9 @@ blurb: "one line, lower case, no period - the line in the index"
 description: "optional: the meta description, a sentence"
 ---
 
-The text. Links to a sister essay are `/insights/06-ui5-over-the-wire/`,
+The text. Links to a sister essay are `/docs-insights/06-ui5-over-the-wire/`,
 links to the manual are absolute (`https://abap2ui5.github.io/docs/...`),
-a diagram goes to `public/` and is referenced as `/insights/43-name.svg`.
+a diagram goes to `public/` and is referenced as `/docs-insights/43-name.svg`.
 ```
 
 The number is the essay's place in reading order: the index, the feed, the

@@ -1,5 +1,5 @@
 // abap2UI5 Insights - the essays as a site of their own, published by
-// GitHub Pages at https://abap2ui5.github.io/insights/
+// GitHub Pages at https://abap2ui5.github.io/docs-insights/
 // (.github/workflows/pages.yml). One of the abap2UI5 family of sites: its own
 // repository, its own build, nothing shared but the convention
 // (CONVENTION.md in abap2UI5/abap2UI5.github.io).
@@ -13,7 +13,7 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://abap2ui5.github.io",
-  base: "/insights/",
+  base: "/docs-insights/",
   trailingSlash: "ignore",
   build: {
     format: "directory",

@@ -45,7 +45,7 @@ ENDCLASS.
 
 The test sets attributes, calls a method and reads attributes. It can do that
 because of how the class is cut. `main( )` dispatches —
-[#7](/insights/07-one-click-one-request/). The methods it dispatches to read
+[#7](/docs-insights/07-one-click-one-request/). The methods it dispatches to read
 data, decide, and change attributes. Only `view_display( )` and the message
 calls need the client, so a test calls the other methods directly:
 

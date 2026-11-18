@@ -53,7 +53,7 @@ The model is assembled at runtime instead, and in ABAP that has always been
 RTTS. Nearly every ABAP developer uses it without necessarily knowing the
 acronym. Its reading half is RTTI, Run Time Type Information:
 
-![Design time: the entity type is declared before any data exists. Runtime: RTTS reads the shape from the data that is there.](/insights/02-runtime-model.svg)
+![Design time: the entity type is declared before any data exists. Runtime: RTTS reads the shape from the data that is there.](/docs-insights/02-runtime-model.svg)
 
 *Design time: the entity type is declared before any data exists. Runtime: RTTS reads the shape from the data that is there.*
 

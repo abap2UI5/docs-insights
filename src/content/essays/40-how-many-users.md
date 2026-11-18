@@ -6,7 +6,7 @@ blurb: "work processes, draft rows, no server affinity, what the monitor measure
 description: "Sizing an abap2UI5 installation - one dialog work process per roundtrip, what a draft row holds, how z2ui5_t_01 grows and cleans itself, no server affinity, what a stateful session changes, what the roundtrip monitor measures."
 ---
 
-*Read first: [#7](/insights/07-one-click-one-request/) for the roundtrip, [#11](/insights/11-a-new-instance-on-every-request/) for the draft.*
+*Read first: [#7](/docs-insights/07-one-click-one-request/) for the roundtrip, [#11](/docs-insights/11-a-new-instance-on-every-request/) for the draft.*
 
 How many users can an abap2UI5 installation carry? The answer is a formula
 with the installation's own numbers in it. This essay is that formula, for the
@@ -19,7 +19,7 @@ draft.
 ## Work Processes
 
 **One roundtrip, one dialog work process.** A click is one POST
-([#7](/insights/07-one-click-one-request/)). A free dialog work
+([#7](/docs-insights/07-one-click-one-request/)). A free dialog work
 process picks it up, reads the draft, runs `main( )`, builds the response,
 writes the new draft and is released. Nothing is held between two clicks. So
 the number of work processes an installation needs depends on *concurrent
@@ -32,13 +32,13 @@ measures it.
 
 **One draft row per roundtrip.** After each request the framework serializes
 the app instance into one row of `z2ui5_t_01`
-([#11](/insights/11-a-new-instance-on-every-request/)). The row holds the
+([#11](/docs-insights/11-a-new-instance-on-every-request/)). The row holds the
 whole instance as one string column: every attribute, public or not, bound or
 not. A roundtrip writes a new row with a new id and leaves the old one, so the
 table holds one row per click until the rows expire. The size of a row is the
 size of the instance. This is why a catalog kept in an attribute is read from
 and written to the draft table on every click
-([#26](/insights/26-100-rows-four-hours-one-request/)).
+([#26](/docs-insights/26-100-rows-four-hours-one-request/)).
 
 The model that travels to the browser is a different, smaller thing: only the
 public attributes the view binds. An attribute in the protected section is in
@@ -73,7 +73,7 @@ rolling restart interrupts nobody, and the capacity is the sum of the servers.
 **What a stateful session changes.** `client->set_session_stateful( )` keeps
 one work process for this user for the rest of the app, so that a classic
 enqueue or an open RFC connection survives between clicks
-([#23](/insights/23-the-lock-is-gone-by-the-next-click/)). It is the right
+([#23](/docs-insights/23-the-lock-is-gone-by-the-next-click/)). It is the right
 tool for a one-to-one migration of a dialog flow, and for a resource that is
 expensive to rebuild on every request.
 
@@ -93,7 +93,7 @@ and when the URL carries the app, so the table formula above still applies.
 
 **The size limit of a binding.** A UI5 JSON model exposes at most 100 rows of
 a bound table unless the app raises the limit with `cs_event-set_size_limit`
-([#26](/insights/26-100-rows-four-hours-one-request/)). Rows beyond
+([#26](/docs-insights/26-100-rows-four-hours-one-request/)). Rows beyond
 the limit are still in the model, in the draft and in the response. The limit
 decides what is shown, not what is sent.
 

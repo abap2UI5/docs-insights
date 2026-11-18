@@ -57,7 +57,7 @@ class, so the chosen row is simply an attribute.
 When ten screens need the same F4, it becomes a class: a `z2ui5_if_app` that
 displays a popup, is called with `nav_app_call( )`, and is read through
 `get_app_prev( )` after it leaves. That is the stack from
-[#18](/insights/18-call-screen-leave-screen/). It is written once, and the
+[#18](/docs-insights/18-call-screen-leave-screen/). It is written once, and the
 search help it offers is whatever `SELECT` it runs.
 
 ## What It Costs
@@ -66,7 +66,7 @@ The automatic part is gone. The screen no longer knows the type behind the
 field, so the developer names the candidates. In return the candidates can be
 anything an ABAP `SELECT` can produce: a join, a CDS view with parameters, a
 subset per user, or a table whose structure is only known at runtime, as in
-[#2](/insights/02-somewhere-on-the-way-to-ui5/).
+[#2](/docs-insights/02-somewhere-on-the-way-to-ui5/).
 
 **In short:** value help is written by hand in one of three sizes —
 suggestions, a popup in the same class, a reusable popup class.

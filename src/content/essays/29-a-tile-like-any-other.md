@@ -13,11 +13,11 @@ button.
 
 **What is installed once.** The launchpad loads a UI5 app from the system's UI5
 repository, so the abap2UI5 frontend — the one generic UI5 app that renders
-every abap2UI5 app ([#8](/insights/08-the-frontend-knows-nothing/)) — has to
+every abap2UI5 app ([#8](/docs-insights/08-the-frontend-knows-nothing/)) — has to
 exist there as a UI5 app. The `standard` branch of the
 [frontend repository](https://github.com/abap2UI5/frontend) ships it through
 abapGit, as app `z2ui5`; which branch fits which installation is in
-[#41](/insights/41-upgrading-the-framework/). That is one deployment for the
+[#41](/docs-insights/41-upgrading-the-framework/). That is one deployment for the
 whole system: every abap2UI5 tile you create points at the same frontend app.
 
 **What is configured per app.** A target mapping, with the app class as the

@@ -17,7 +17,7 @@ well. Compare what an agent has to do in each case:
   frontend at the same time, and has to keep the contract between them
   correct.
 - **An abap2UI5 app.** The agent writes one file in one language — the shape
-  of [#5](/insights/05-a-classrun-for-the-browser/) — and what it writes is
+  of [#5](/docs-insights/05-a-classrun-for-the-browser/) — and what it writes is
   what runs.
 
 Three things around the framework turn this into a working setup. None of

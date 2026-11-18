@@ -6,11 +6,11 @@ blurb: "the long report, the busy indicator, the timer and the job"
 description: "A roundtrip occupies one dialog work process for as long as main( ) runs, and nothing runs between two roundtrips. What that means for a report that takes two minutes: the busy indicator, splitting the work, a background job, and a timer that polls it."
 ---
 
-*Read first: [#7](/insights/07-one-click-one-request/) for the roundtrip.*
+*Read first: [#7](/docs-insights/07-one-click-one-request/) for the roundtrip.*
 
 This essay is about work that takes longer than a click: the long report, the
 progress display and the background job. The starting point is a claim from
-[#7](/insights/07-one-click-one-request/): nothing runs between two clicks. No thread
+[#7](/docs-insights/07-one-click-one-request/): nothing runs between two clicks. No thread
 waits, no promise resolves later, no controller ticks in the background. A
 roundtrip starts when the browser posts, ends when `main( )` returns, and in
 between the app is a row in a table.
@@ -70,7 +70,7 @@ nothing. The three arguments are the event name, the delay in milliseconds,
 and a flag: `X` suppresses the busy indicator for the tick, so the screen
 stays usable while the poll runs.
 
-![START schedules the job, a timer in the browser waits three seconds, POLL reads the job status and either re-arms the timer or shows the result.](/insights/24-poll.svg)
+![START schedules the job, a timer in the browser waits three seconds, POLL reads the job status and either re-arms the timer or shows the result.](/docs-insights/24-poll.svg)
 
 *The loop: the job runs in the background, the browser asks, nothing waits in between.*
 
