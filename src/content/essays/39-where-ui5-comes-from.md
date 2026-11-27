@@ -1,6 +1,8 @@
 ---
 title: "Where UI5 Comes From"
 number: 39
+id: where-ui5-comes-from
+date: "2026-11-01T20:14:03+00:00"
 part: running
 blurb: "the CDN, the system's own UI5, the launchpad's — one string in the exit class"
 description: "Which UI5 an abap2UI5 app runs on is one string in the exit class: OpenUI5 from the CDN by default, SAPUI5 or a pinned version from ui5.sap.com, or the system's own UI5 - and in the launchpad, the launchpad's. What each choice decides for network, licence, version and upgrade."

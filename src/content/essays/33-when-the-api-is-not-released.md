@@ -1,6 +1,8 @@
 ---
 title: "When the API Is Not Released"
 number: 33
+id: when-the-api-is-not-released
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "the clean core levels, and the wrapper"
 description: "SAP's four clean core levels, where abap2UI5 sits (Level A), where an app lands by what it calls, and the wrapper that gives an unreleased API a name and a boundary."

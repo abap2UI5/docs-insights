@@ -1,6 +1,8 @@
 ---
 title: "UI5 Freestyle or abap2UI5?"
 number: 37
+id: freestyle-or-abap2ui5
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "the four cases where the browser has to be smart"
 description: "The technical criteria for choosing UI5 Freestyle or abap2UI5 - the four cases where the browser has to be smart, and the case where the backend already knows everything."

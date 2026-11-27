@@ -1,6 +1,8 @@
 ---
 title: "Only the Changed Part"
 number: 10
+id: only-the-changed-part
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "the view stays, the model updates"
 description: "Why the view is not sent on every click - an event changes the model alone, UI5 data binding updates the bound controls, and focus, scroll and half-typed input survive."

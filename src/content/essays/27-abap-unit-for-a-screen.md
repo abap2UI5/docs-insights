@@ -1,6 +1,8 @@
 ---
 title: "ABAP Unit for a Screen"
 number: 27
+id: abap-unit-for-a-screen
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "testing the class, linting the view"
 description: "Testing an abap2UI5 app in ABAP Unit without a client, HTTP or a browser - keep the logic out of client, call the handler methods directly, lint the view."

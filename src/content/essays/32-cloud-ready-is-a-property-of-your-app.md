@@ -1,6 +1,8 @@
 ---
 title: "Cloud-Ready Is a Property of Your App"
 number: 32
+id: cloud-ready-is-a-property-of-your-app
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "decided in the SELECT"
 description: "The framework is ABAP Cloud compliant, and that says nothing about the app - cloud-readiness is decided in the SELECT, a released CDS view against a database table."

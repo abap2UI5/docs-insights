@@ -1,6 +1,8 @@
 ---
 title: "One Codebase, 7.02 to ABAP Cloud"
 number: 31
+id: one-codebase-702-to-abap-cloud
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "why the release barely matters"
 description: "Why abap2UI5 runs from NetWeaver 7.02 to ABAP Cloud from one codebase - the three utility classes that absorb the release differences, the generated 702 branch, and UI5 from the bootstrap."

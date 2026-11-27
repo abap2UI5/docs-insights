@@ -1,6 +1,8 @@
 ---
 title: "How Many Users: Sizing an Installation"
 number: 40
+id: how-many-users
+date: "2026-10-31T22:20:29+01:00"
 part: running
 blurb: "work processes, draft rows, no server affinity, what the monitor measures"
 description: "Sizing an abap2UI5 installation - one dialog work process per roundtrip, what a draft row holds, how z2ui5_t_01 grows and cleans itself, no server affinity, what a stateful session changes, what the roundtrip monitor measures."

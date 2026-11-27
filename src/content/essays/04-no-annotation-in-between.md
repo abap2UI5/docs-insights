@@ -1,6 +1,8 @@
 ---
 title: "Every UI5 Control, No Annotation in Between"
 number: 4
+id: no-annotation-in-between
+date: "2026-10-31T21:35:20+01:00"
 part: rests
 blurb: "the vocabulary is the UI5 control library, all of it"
 description: "Why the vocabulary of an abap2UI5 view is the UI5 control library itself - every control, at the UI5 version the bootstrap names - shown with a sap.m.Wizard."

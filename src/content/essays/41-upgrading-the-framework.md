@@ -1,6 +1,8 @@
 ---
 title: "Upgrading the Framework"
 number: 41
+id: upgrading-the-framework
+date: "2026-10-31T22:20:29+01:00"
 part: running
 blurb: "release tags, the stable contract, the frozen package, pull, pin, roll back"
 description: "How abap2UI5 is versioned and upgraded - release tags, what is a stable contract (the public package), what the frozen package means, the deprecations page, pulling a tag with abapGit, the frontend branches, pinning, rolling back, what to re-test."

@@ -1,6 +1,8 @@
 ---
 title: "What the Client Can Send"
 number: 38
+id: what-the-client-can-send
+date: "2026-10-31T22:20:29+01:00"
 part: running
 blurb: "the class, the draft id, the event, every bound value — and what is checked"
 description: "The threat model of an abap2UI5 app - what the browser chooses (the class, a draft id, the event, every bound value, startup parameters) and what the framework checks on each; the page a security review starts from."

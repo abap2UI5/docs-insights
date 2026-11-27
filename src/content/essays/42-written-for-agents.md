@@ -1,6 +1,8 @@
 ---
 title: "Why AI Agents Handle abap2UI5 Apps Well"
 number: 42
+id: written-for-agents
+date: "2026-10-31T21:35:20+01:00"
 part: coda
 blurb: "why one class in one language suits an agent"
 description: "Why a one-class, one-language app is the shape an AI coding agent handles best, and where the setup - the published page map, the linter, the MCP server, the sample catalogs - is documented."

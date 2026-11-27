@@ -1,6 +1,8 @@
 ---
 title: "No Build, No Deploy, No Cache"
 number: 16
+id: no-build-no-deploy-no-cache
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "change, activate, refresh — and where a BSP still enters"
 description: "What is missing from change, activate, refresh - no frontend build, no deployment path, no cache to invalidate - because the initial page and the frontend modules are answered from ABAP source."

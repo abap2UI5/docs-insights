@@ -1,6 +1,8 @@
 ---
 title: "URL, Reload and Back: Where the URL Went"
 number: 19
+id: where-the-url-went
+date: "2026-11-01T20:14:03+00:00"
 part: day
 blurb: "F5, the back button and the bookmark"
 description: "SAP GUI had no URL. A browser has three buttons the GUI never had - reload, back and the address bar - and in abap2UI5 the app decides how much of itself the URL carries: nothing by default, the app state, or a route per app."

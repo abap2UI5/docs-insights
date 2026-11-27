@@ -1,6 +1,8 @@
 ---
 title: "RAP or abap2UI5?"
 number: 36
+id: rap-or-abap2ui5
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "behavior against screen, and EML from an abap2UI5 app"
 description: "The technical criteria for choosing RAP with Fiori Elements or abap2UI5 for a given screen - behavior against screen, EML from an abap2UI5 app, a runtime-typed model, the minimum release."

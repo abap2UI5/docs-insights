@@ -1,6 +1,8 @@
 ---
 title: "Data Binding: Where the Selection Screen Went"
 number: 13
+id: where-the-selection-screen-went
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "the variable and the field are one declaration again"
 description: "What PARAMETERS did that the browser lost - the variable and the field as one declaration - and how _bind( ) puts them back together."

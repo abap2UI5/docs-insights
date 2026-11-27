@@ -1,6 +1,8 @@
 ---
 title: "Navigation: CALL SCREEN, LEAVE SCREEN"
 number: 18
+id: call-screen-leave-screen
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "the app stack, sub-apps and popups"
 description: "The app stack - nav_app_call( ) pushes an instance, nav_app_leave( ) pops it, get_app_prev( ) hands the caller the sub-app with its typed attributes - and where popups and the launchpad fit."

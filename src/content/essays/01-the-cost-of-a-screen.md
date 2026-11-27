@@ -1,6 +1,8 @@
 ---
 title: "The Cost of a Screen: A Whole App in One Class"
 number: 1
+id: the-cost-of-a-screen
+date: "2026-10-31T21:35:20+01:00"
 part: rests
 blurb: "a whole application as one class, and what has to exist beside it"
 description: "The smallest complete abap2UI5 app - one class, one interface, one URL parameter - and what has to exist beside it in the system, which is nothing."

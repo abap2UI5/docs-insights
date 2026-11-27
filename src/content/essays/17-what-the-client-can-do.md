@@ -1,6 +1,8 @@
 ---
 title: "The Client API: What the Client Can Do"
 number: 17
+id: what-the-client-can-do
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "the whole API an app calls, in one table"
 description: "The whole of z2ui5_if_client by shape - show a screen, bind data, read the event, navigate, message, follow-up actions - before knowing it by name."

@@ -1,6 +1,8 @@
 ---
 title: "Where Your Own JavaScript Goes"
 number: 15
+id: where-your-own-javascript-goes
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "three declared seams, no plugin system"
 description: "The three declared seams for JavaScript of your own - a control method called by id, expression binding in the view, a custom control in the z2ui5_ccc BSP - and why there is no plugin system."

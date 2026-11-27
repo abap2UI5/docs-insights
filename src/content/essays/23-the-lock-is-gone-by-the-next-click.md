@@ -1,6 +1,8 @@
 ---
 title: "The Lock Is Gone by the Next Click"
 number: 23
+id: the-lock-is-gone-by-the-next-click
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "enqueue in a stateless world"
 description: "Why an ENQUEUE set while a screen opens is gone before the next click, and the patterns that replace it - lock at save, an optimistic check, a soft lock, a stateful session."

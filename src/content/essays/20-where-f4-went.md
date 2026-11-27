@@ -1,6 +1,8 @@
 ---
 title: "Value Help: Where F4 Went"
 number: 20
+id: where-f4-went
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "value help in three sizes"
 description: "Value help in three sizes - suggestion items filtered in the browser, a selection popup of the same class, a reusable value-help app on the stack - and what the DDIC link cost."

@@ -1,6 +1,8 @@
 ---
 title: "Messages and Errors: MESSAGE Still Works"
 number: 21
+id: message-still-works
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "messages, exceptions, translation"
 description: "Toasts, message boxes, sy, BAPIRET2 and exception objects - what carries over from classic messages, what an escaped exception does to the roundtrip, and check_hide_error_details."
