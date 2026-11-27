@@ -1,6 +1,8 @@
 ---
 title: "Nothing Runs Between Two Clicks"
 number: 24
+id: nothing-runs-between-two-clicks
+date: "2026-11-01T20:14:03+00:00"
 part: day
 blurb: "the long report, the busy indicator, the timer and the job"
 description: "A roundtrip occupies one dialog work process for as long as main( ) runs, and nothing runs between two roundtrips. What that means for a report that takes two minutes: the busy indicator, splitting the work, a background job, and a timer that polls it."

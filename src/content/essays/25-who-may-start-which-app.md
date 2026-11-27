@@ -1,6 +1,8 @@
 ---
 title: "Who May Start Which App"
 number: 25
+id: who-may-start-which-app
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "one ICF node, authorization, CSRF, the CSP"
 description: "One ICF node serves every app and the URL names the class - where authentication, authorization, the CSRF check and the Content Security Policy each sit."

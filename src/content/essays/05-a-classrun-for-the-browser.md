@@ -1,6 +1,8 @@
 ---
 title: "Hello World: A Classrun for the Browser"
 number: 5
+id: a-classrun-for-the-browser
+date: "2026-10-31T21:35:20+01:00"
 part: rests
 blurb: "the smallest app: one interface, one method, and it runs"
 description: "The shape abap2UI5 copied from if_oo_adt_classrun - one interface, one method, and it runs - and why a one-class app is one thing to read."

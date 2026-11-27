@@ -1,6 +1,8 @@
 ---
 title: "One Handler for Every App"
 number: 9
+id: one-handler-for-every-app
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "no service per screen, and what the handler leaves to the apps"
 description: "Why no abap2UI5 app has a service of its own - one generic HTTP handler moves two strings for every app, and what the framework leaves to the apps to stay that small."

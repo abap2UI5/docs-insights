@@ -1,6 +1,8 @@
 ---
 title: "On-Stack or Side-by-Side"
 number: 34
+id: on-stack-or-side-by-side
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "two places to run, one class"
 description: "Two places to run the same app class - inside the SAP system, or on the BTP ABAP Environment against released remote APIs - and the lifecycle each one inherits."

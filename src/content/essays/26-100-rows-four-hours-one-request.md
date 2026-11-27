@@ -1,6 +1,8 @@
 ---
 title: "100 Rows, Four Hours, One Request"
 number: 26
+id: 100-rows-four-hours-one-request
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "the three numbers behind performance"
 description: "The three numbers behind abap2UI5 performance - the 100-row size limit of a list binding, the four-hour draft expiry, and what one request costs in instance and model size."

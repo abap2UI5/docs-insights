@@ -1,6 +1,8 @@
 ---
 title: "Runtime-Typed Tables: Somewhere on the Way to UI5, We Lost RTTS"
 number: 2
+id: somewhere-on-the-way-to-ui5
+date: "2026-10-31T21:35:20+01:00"
 part: rests
 blurb: "a table whose structure is only known at runtime, drawn in UI5"
 description: "A table whose structure is only known at runtime, drawn in UI5 - how abap2UI5 binds data typed by the runtime type services without an entity type, and what a view without a contract costs."

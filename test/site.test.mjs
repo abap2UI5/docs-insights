@@ -178,6 +178,24 @@ test("the canonical address is the published one, and the feed is there", () => 
   assert.equal((rss.match(/<item>/g) || []).length, slugs.length);
 });
 
+test("a feed item keeps its guid when its number moves, and carries its date", () => {
+  const rss = read(path.join(DIST, "rss.xml"));
+  const items = [...rss.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1]);
+  const guids = items.map((i) => i.match(/<guid isPermaLink="false">tag:abap2ui5\.github\.io,2026:docs-insights\/([a-z0-9-]+)<\/guid>/)?.[1]);
+  assert.ok(guids.every(Boolean), "every item: a tag URI of the essay's id, not a permalink");
+  assert.equal(new Set(guids).size, guids.length, "two essays with one id");
+  for (const g of guids) assert.doesNotMatch(g, /^\d{2}-/, `${g}: the id carries the number, which moves`);
+  for (const i of items) {
+    const date = i.match(/<pubDate>([^<]+)<\/pubDate>/)?.[1];
+    assert.ok(date && !Number.isNaN(Date.parse(date)), "every item: a pubDate");
+    assert.match(date, /^[A-Z][a-z]{2}, \d{2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} GMT$/, "RFC 822");
+  }
+  // the frontmatter: every essay an id and a date, the id given once
+  const ids = slugs.map((s) => read(path.join(ESSAYS, `${s}.md`)).match(/^id: (\S+)$/m)?.[1]);
+  assert.ok(ids.every(Boolean), "an essay without an id");
+  assert.deepEqual([...ids].sort(), [...guids].sort());
+});
+
 test("the search feed: every essay once, at its own address, for the family's index", () => {
   const feed = JSON.parse(read(path.join(DIST, "search.json")));
   assert.equal(feed.site, "Insights");

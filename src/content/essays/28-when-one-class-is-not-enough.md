@@ -1,6 +1,8 @@
 ---
 title: "When One Class Is Not Enough"
 number: 28
+id: when-one-class-is-not-enough
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "the four ways to split a larger app"
 description: "The four ways to split a larger abap2UI5 app - a class per screen on the stack, popups as classes, logic in a class without a screen, nested views - all of them ordinary ABAP."

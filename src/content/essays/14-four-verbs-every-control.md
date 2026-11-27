@@ -1,6 +1,8 @@
 ---
 title: "The View Builder: Four Verbs, Every Control"
 number: 14
+id: four-verbs-every-control
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "why the view builder knows no controls"
 description: "Why z2ui5_cl_ui5_view_builder has four methods - ele, tag, a, end - instead of one per control, what the completion list cost, and what the linter gives back."

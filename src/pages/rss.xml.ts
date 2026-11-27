@@ -1,8 +1,16 @@
-// The feed, written by hand: a few dozen items are not worth a dependency. The essays
-// carry no date - they are chapters, not posts - so the feed is in reading
-// order and the channel's date is the build's.
+// The feed, written by hand: a few dozen items are not worth a dependency. It
+// is in reading order - the essays are chapters, not posts - and each item
+// carries the date its essay was first published (frontmatter `date`).
+//
+// The guid is the essay's frontmatter `id`, not its address: the address
+// carries the number, which is the place in reading order and moves when an
+// essay is added before it (AGENTS.md). A guid that moved with it told every
+// feed reader that each renumbered essay was a new one. So the guid is a tag
+// URI of the id (isPermaLink="false"), the link is the address of today.
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+
+const guid = (id: string) => `tag:abap2ui5.github.io,2026:docs-insights/${id}`;
 
 const esc = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -16,7 +24,8 @@ export const GET: APIRoute = async ({ site }) => {
       (e) => `    <item>
       <title>${esc(`#${e.data.number} ${e.data.title}`)}</title>
       <link>${root}${e.id}/</link>
-      <guid isPermaLink="true">${root}${e.id}/</guid>
+      <guid isPermaLink="false">${guid(e.data.id)}</guid>
+      <pubDate>${e.data.date.toUTCString()}</pubDate>
       <description>${esc(e.data.description ?? e.data.blurb)}</description>
     </item>`,
     )

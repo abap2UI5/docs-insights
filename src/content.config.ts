@@ -13,6 +13,13 @@ const essays = defineCollection({
     title: z.string(),
     // the position in reading order, and the number in the file name
     number: z.number().int().positive(),
+    // what the essay IS, whatever its number: the slug without the number,
+    // as it was when the id was given, and never changed after - the feed's
+    // guid, so a renumbering does not hand every reader 42 "new" items
+    id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
+    // when the essay was first published here (the first commit that added
+    // its file, following renames); the feed's pubDate
+    date: z.coerce.date(),
     part: z.enum(PART_IDS),
     // the one line under the title in the index, as the docs' table had it
     blurb: z.string(),

@@ -1,6 +1,8 @@
 ---
 title: "One Class, No Programming Model"
 number: 3
+id: one-class-no-programming-model
+date: "2026-10-31T21:35:20+01:00"
 part: rests
 blurb: "every API the system has, from BAPI to EML, behind one unchanged UI class"
 description: "The one interface an abap2UI5 app implements, and why three save handlers - EML, a MODIFY, a BAPI - sit behind one unchanged UI class."

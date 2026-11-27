@@ -1,6 +1,8 @@
 ---
 title: "Swapping the View at Runtime"
 number: 12
+id: swapping-the-view-at-runtime
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "a different control, chosen in an IF"
 description: "A different control chosen in an IF - what follows when the view is a string the app produces per request rather than an artifact fixed at design time."

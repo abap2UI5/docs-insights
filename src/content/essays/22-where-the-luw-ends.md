@@ -1,6 +1,8 @@
 ---
 title: "Where the LUW Ends"
 number: 22
+id: where-the-luw-ends
+date: "2026-11-01T20:14:03+00:00"
 part: day
 blurb: "a rollback around main( ), and the commit that is yours"
 description: "Every roundtrip is one LUW. The framework rolls back before and after main( ) and commits only its own draft - so an UPDATE without the app's own COMMIT WORK is undone, unlike in a dialog step."

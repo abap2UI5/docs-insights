@@ -1,6 +1,8 @@
 ---
 title: "One Frontend for Every App: The Frontend Knows Nothing"
 number: 8
+id: the-frontend-knows-nothing
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "one shell for every app, and why it never needs a redeploy"
 description: "What the first GET delivers to the browser - a shell that renders a view and a model and knows no app - and why one shell serves every app in the system without a redeploy."

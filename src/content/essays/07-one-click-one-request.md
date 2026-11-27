@@ -1,6 +1,8 @@
 ---
 title: "One Click, One Request"
 number: 7
+id: one-click-one-request
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "PBO, PAI, and the dispatch in main( )"
 description: "The mental model under every abap2UI5 app - one click is one request and one call to main( ) on a fresh instance - and the three questions main( ) dispatches on, in order."

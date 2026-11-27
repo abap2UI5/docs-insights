@@ -1,6 +1,8 @@
 ---
 title: "A Tile Like Any Other: The Fiori Launchpad"
 number: 29
+id: a-tile-like-any-other
+date: "2026-10-31T21:35:20+01:00"
 part: day
 blurb: "into the Fiori Launchpad"
 description: "An abap2UI5 app in the Fiori Launchpad - the one shell BSP installed system-wide, the target mapping per app, what the app can read inside, and the blank tile after an import."

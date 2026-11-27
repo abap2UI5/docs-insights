@@ -1,6 +1,8 @@
 ---
 title: "From ITS to abap2UI5"
 number: 30
+id: from-its-to-abap2ui5
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "twenty-seven years in one line"
 description: "Twenty-seven years of SAP user interfaces in one line - ITS, BSP, Web Dynpro, UI5 Freestyle, RAP, abap2UI5 - and which move did not reverse."

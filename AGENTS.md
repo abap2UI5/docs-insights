@@ -18,12 +18,12 @@ and every local link, the font URLs and the tests use it.
 
 | Path | Purpose |
 | --- | --- |
-| `src/content/essays/NN-slug.md` | One essay per file. Frontmatter: `title` (without the number), `number` (the place in reading order, = `NN`), `part`, `blurb` (the line in the index), optional `description` (meta) |
+| `src/content/essays/NN-slug.md` | One essay per file. Frontmatter: `title` (without the number), `number` (the place in reading order, = `NN`), `id` (the slug without the number when the essay was added - the feed's guid, never changed, also not on a renumbering), `date` (first published: the first commit that added the file, `git log --follow --diff-filter=A --format=%aI -- <file>`, the oldest line), `part`, `blurb` (the line in the index), optional `description` (meta) |
 | `src/lib/parts.ts` | The parts (id, title, lead) |
 | `src/lib/moved.ts` | Slugs of an earlier numbering and the essay each now is; each gets a page that refreshes to the new address |
 | `src/pages/index.astro` | The index, built as the home page: the title, the axis figure (HTML), then one group per part - the home page's heading, the part's line, its essays as a list - one column at the essay measure |
 | `src/pages/[slug].astro` | The route for an essay (`src/components/Essay.astro`: its part, reading time, the other essays of the part, previous/next) and for a moved address (`src/components/Moved.astro`) |
-| `src/pages/rss.xml.ts` | The feed, in reading order |
+| `src/pages/rss.xml.ts` | The feed, in reading order: guid a tag URI of the essay's `id` (`isPermaLink="false"`, stable across renumbering), pubDate its `date` |
 | `src/pages/search.json.ts` | What the family's search finds of this site: one entry per essay (title, line, headings, rarer words). abap2UI5/docs fetches it at build time into the one search index the home page and the playground read; the shape `{ site, url, entries: [{ title, text, headings, terms, url }] }` is the same on every site of the family |
 | `src/layouts/Page.astro` | The document: head, the Content-Security-Policy, the family's top line, the foot |
 | `src/styles/global.css` | The one stylesheet; the family's tokens copied in; light and dark follow the system |
@@ -56,7 +56,7 @@ npm run report:sentences   # sentences over 35 words; a report, not a test
   carries the same number (a test holds both). The index, previous/next and
   the feed follow it. A new essay therefore shifts the essays after it - which
   changes their slugs, so do it as one change across the family: rename the
-  files, rewrite the links (`[#N](/docs-insights/NN-slug/)`, link text and target
+  files (their `id` and `date` stay as they are), rewrite the links (`[#N](/docs-insights/NN-slug/)`, link text and target
   together), add every old slug to `src/lib/moved.ts`, update `ADDRESSES`, and repoint the docs' stubs in `docs/public/advanced/insights/` and
   any link in the sister repositories. Renumbering is expensive on purpose:
   add essays in batches, not one at a time.

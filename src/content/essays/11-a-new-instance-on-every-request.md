@@ -1,6 +1,8 @@
 ---
 title: "A New Instance on Every Request"
 number: 11
+id: a-new-instance-on-every-request
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "serialized state, and what that asks of the class"
 description: "Every request is a fresh instance of the app class - how z2ui5_t_01 carries the serialized instance forward, which attributes survive, and why a large attribute costs every click."

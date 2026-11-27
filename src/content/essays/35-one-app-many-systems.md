@@ -1,6 +1,8 @@
 ---
 title: "One App, Many Systems"
 number: 35
+id: one-app-many-systems
+date: "2026-10-31T21:35:20+01:00"
 part: where
 blurb: "several S/4 systems behind one app, and the boundary the app draws"
 description: "One side-by-side abap2UI5 app on the BTP ABAP Environment serving several S/4 systems - what makes it possible, and the tenant boundary the app has to enforce itself."

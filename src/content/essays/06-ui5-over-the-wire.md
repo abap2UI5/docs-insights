@@ -1,6 +1,8 @@
 ---
 title: "UI5 Over-the-Wire: The Server Sends the View"
 number: 6
+id: ui5-over-the-wire
+date: "2026-10-31T21:35:20+01:00"
 part: how
 blurb: "every request answered with two strings"
 description: "The one idea under abap2UI5: the backend answers every request with two strings, a UI5 XML view and its JSON model, and the browser renders them - UI5 Over-the-Wire."
